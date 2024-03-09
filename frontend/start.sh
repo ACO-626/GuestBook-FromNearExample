@@ -5,6 +5,7 @@ NC='\033[0m' # No Color
 
 CONTRACT_DIRECTORY=../contract
 DEV_ACCOUNT_FILE="${CONTRACT_DIRECTORY}/neardev/dev-account.env"
+#DEV_ACCOUNT_FILE="aco626.testnet"
 
 start () {
   echo The app is starting!
@@ -19,7 +20,7 @@ alert () {
 }
 
 if [ -f "$DEV_ACCOUNT_FILE" ]; then
-  start
-else
   alert
+else
+  start
 fi
